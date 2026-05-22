@@ -29,8 +29,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: .github/workflows/Dockerfile.test
           push: true
           tags: ghcr.io/joshjohanning/super-linter:test
-          secrets: |
-            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
